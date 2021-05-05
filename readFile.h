@@ -4,7 +4,17 @@
 #include <string>
 #include <vector>
 
-class readFile{
+using namespace std;
 
+struct value {
+	string name;
+	float data;
+};
+
+class readFile{
+	vector<value> values;
+	string expression;
+public:
+	void fread(string);
 };
 

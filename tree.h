@@ -1,8 +1,6 @@
 #pragma once
 #include "readFile.h"
 
-using namespace std;
-
 struct node {
 	string data;
 	node* left, * right;
