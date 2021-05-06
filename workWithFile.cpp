@@ -28,6 +28,7 @@ void workWithFile::fread(string file_name) {
 
 void workWithFile::fwrite(string file_name, float result) {
     ofstream outFile(file_name);
+    cout << "Result =  " << result << ";\n";
     outFile << "Result =  " << result << ";\n";
     outFile.close();
 }

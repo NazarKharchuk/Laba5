@@ -9,10 +9,11 @@ struct node {
 
 class tree: public workWithFile {
 	node* root;
+	node* add_element(node*, string);
 public:
 	node* get_root() { return root; };
 	tree() :root(NULL) {};
-	//void create_tree(string);
+	void create_tree();
 	//float count();
 	void print(string&, node*, bool);
 };
