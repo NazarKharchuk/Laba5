@@ -8,7 +8,7 @@ void workWithFile::fread(string file_name) {
     string str;
     value val;
     while (getline(inFile, str)) {
-        cout << str << endl;
+        //cout << str << endl;
         if (str.find("=") != string::npos) {
             val.name = str.substr(0, str.find("=") - 1);
             val.data = stof(str.substr(str.find("=") + 2, str.length() - str.find("=") - 3)); //
@@ -24,4 +24,10 @@ void workWithFile::fread(string file_name) {
     /*for (int i = 0; i < values.size(); i++)
         cout << values[i].name << "___" << values[i].data << "___\n";
     cout << expression << "___\n";*/
+}
+
+void workWithFile::fwrite(string file_name, float result) {
+    ofstream outFile(file_name);
+    outFile << "Result =  " << result << ";\n";
+    outFile.close();
 }

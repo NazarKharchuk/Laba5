@@ -17,5 +17,6 @@ protected:
 	string expression;
 public:
 	void fread(string);
+	void fwrite(string, float);
 };
 
