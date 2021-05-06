@@ -1,5 +1,5 @@
 #pragma once
-#include "readFile.h"
+#include "workWithFile.h"
 
 struct node {
 	string data;
@@ -7,7 +7,7 @@ struct node {
 	node(string);
 };
 
-class tree{
+class tree: public workWithFile {
 	node* root;
 public:
 	node* get_root() { return root; };

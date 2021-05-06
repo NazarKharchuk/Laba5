@@ -11,7 +11,8 @@ struct value {
 	float data;
 };
 
-class readFile{
+class workWithFile {
+protected:
 	vector<value> values;
 	string expression;
 public:
