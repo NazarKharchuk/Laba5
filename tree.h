@@ -18,4 +18,8 @@ public:
 	float count();
 	void delete_tree(node*);
 	void print(string&, node*, bool);
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> master

@@ -11,4 +11,8 @@ int main() {
 	result = our_tree.count();
 	our_tree.fwrite("result.txt", result);
 	our_tree.delete_tree(our_tree.get_root());
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
