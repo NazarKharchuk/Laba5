@@ -127,3 +127,12 @@ float tree::count()
     float num = recursive_count(root);
     return(num);
 }
+
+void tree::delete_tree(node* element) 
+{
+    if (element != NULL) 
+    {
+        delete_tree(element->left);
+        delete_tree(element->right);
+        delete element;
+    }
