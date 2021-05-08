@@ -6,5 +6,9 @@ int main() {
 	our_tree.fread(file_name);
 	our_tree.create_tree();
 	string str = "";
-	our_tree.print(str, our_tree.get_root(), false);
+	//our_tree.print(str, our_tree.get_root(), false);
+	float result;
+	result = our_tree.count();
+	our_tree.fwrite("result.txt", result);
+
 }

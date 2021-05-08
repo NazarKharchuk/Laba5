@@ -54,3 +54,76 @@ node* tree::add_element(node* element, string str) {
     }
     return element;
 }
+
+float tree::recursive_count(node* element) 
+{
+    if (element->data == "+") 
+    {
+        float num, num1, num2;
+        num1 = recursive_count(element->left);
+        num2 = recursive_count(element->right);
+        num = num1 + num2;
+        //cout << num1 << "___num1 + num2___" << num2 << "___result ___" << num << endl;
+        return(num);
+    }
+
+    if (element->data == "-") 
+    {
+        float num, num1, num2;
+        num1 = recursive_count(element->left);
+        num2 = recursive_count(element->right);
+        num = num1 - num2;
+        //cout << num1 << "___num1 - num2___" << num2 << "___result ___" << num << endl;
+        return(num);
+    }
+
+    if (element->data == "*") 
+    {
+        float num, num1, num2;
+        num1 = recursive_count(element->left);
+        num2 = recursive_count(element->right);
+        num = num1 * num2;
+        //cout << num1 << "___num1 * num2___" << num2 << "___result ___" << num << endl;
+        return(num);
+    }
+
+    if (element->data == "/") 
+    {
+        float num, num1, num2;
+        num1 = recursive_count(element->left);
+        num2 = recursive_count(element->right);
+        if (num2 != 0) 
+        {
+            num = num1 / num2;
+            return(num);
+        }
+        else 
+        {
+            cout << "Error : X / 0!!!";
+            return(0);
+        }
+        //cout << num1 << "___num1 / num2___" << num2 <<"___result ___"<<num << endl;
+    }
+
+    if (element->data != "+" && element->data != "-" && element->data != "*" && element->data != "/") 
+    {
+        float num;
+        for (int i = 0; i < values.size(); i++) 
+        {
+            if (values[i].name == element->data) 
+            {
+                num = values[i].data;
+                //cout << num << "___num"<< endl;
+                return (num);
+                break;
+            }
+        }
+        return (stof(element->data));
+    }
+}
+
+float tree::count() 
+{
+    float num = recursive_count(root);
+    return(num);
+}

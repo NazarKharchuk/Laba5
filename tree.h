@@ -7,14 +7,15 @@ struct node {
 	node(string);
 };
 
-class tree: public workWithFile {
+class tree : public workWithFile {
 	node* root;
 	node* add_element(node*, string);
+	float recursive_count(node*);
 public:
 	node* get_root() { return root; };
 	tree() :root(NULL) {};
 	void create_tree();
-	//float count();
+	float count();
 	void print(string&, node*, bool);
 };
 
