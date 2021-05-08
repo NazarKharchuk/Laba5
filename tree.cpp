@@ -128,21 +128,16 @@ float tree::count()
     return(num);
 }
 
-<<<<<<< HEAD
-void tree::delete_tree(node* element)
-{
-    if (element != NULL) {
-=======
+
+
 void tree::delete_tree(node* element) 
 {
     if (element != NULL) 
     {
->>>>>>> master
+
         delete_tree(element->left);
         delete_tree(element->right);
         delete element;
     }
-<<<<<<< HEAD
+
 }
-=======
->>>>>>> master
