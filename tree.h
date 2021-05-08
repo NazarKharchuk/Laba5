@@ -16,6 +16,6 @@ public:
 	tree() :root(NULL) {};
 	void create_tree();
 	float count();
+	void delete_tree(node*);
 	void print(string&, node*, bool);
 };
-
